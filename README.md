@@ -7,6 +7,7 @@ TODO:
 
 2. Just nu läses en nod av i taget. Detta funkar bra om två skådespelare varit med i samma film, är de dock fler än 2 filmer bort från varandra tar detta mycket lång tid.
   Lösning: Avlinjärisera processen. Flera noder kan scannas på grannar parallellt med varandra. Problem: IMDB lär ogilla att få 1000 http-requests i sekunden från samma IP-adress.
-    Lösning 2: Ladda ner IMDB:s databaser från https://www.imdb.com/interfaces/ och hantera BFS-sökningen "in-house". När snabbaste vägen har hittats kan ID:t till filmerna/skådespelarna
+  
+   Lösning 2: Ladda ner IMDB:s databaser från https://www.imdb.com/interfaces/ och hantera BFS-sökningen "in-house". När snabbaste vägen har hittats kan ID:t till filmerna/skådespelarna
   användas för att skicka några enstaka HTTP-requests för att hämta hem bilder och posters på/från skådespelare/filmer. Problem: Databaserna kräver större minne. De cirkulerar dock runt
   50-200MB per fil vilket inte är helt orimligt. Detta känns som den bästa approachen.
