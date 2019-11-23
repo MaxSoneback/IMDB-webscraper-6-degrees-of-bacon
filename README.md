@@ -2,6 +2,8 @@ En webscraper skrivet i Node.js/Javascript som tar in namnet på 2 skådespelare
 
 Informationen hämtas från IMDB genom HTTP-requests med hjälp av Axios-paketet och responsen behandlas med jQuery-kommandon (detta görs möjligt av Cheerio).
 
+  Då BFS har komplexiteten O(b^d) där b=avg(branching factor) och d = djupet på första mål noden (dvs endNode) kommer dock detta att ta väldigt lång tid, då b generellt sett är väldigt stor för både skådespelare och filmer.
+
 TODO:
 1. Koppla samman detta med någon typ av front-end för att visualisera sammankopplingen.
 
@@ -11,3 +13,4 @@ TODO:
    Lösning 2: Ladda ner IMDB:s databaser från https://www.imdb.com/interfaces/ och hantera BFS-sökningen "in-house". När snabbaste vägen har hittats kan ID:t till filmerna/skådespelarna
   användas för att skicka några enstaka HTTP-requests för att hämta hem bilder och posters på/från skådespelare/filmer. Problem: Databaserna kräver större minne. De cirkulerar dock runt
   50-200MB per fil vilket inte är helt orimligt. Detta känns som den bästa approachen.
+
