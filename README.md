@@ -2,7 +2,7 @@ En webscraper skrivet i Node.js/Javascript som tar in namnet på 2 skådespelare
 
 Informationen hämtas från IMDB genom HTTP-requests med hjälp av Axios-paketet och responsen behandlas med jQuery-kommandon (detta görs möjligt av Cheerio).
 
-  Då BFS har komplexiteten O(b^d) där b=avg(branching factor) och d = djupet på första mål noden (dvs endNode) kommer dock detta att ta väldigt lång tid, då b generellt sett är väldigt stor för både skådespelare och filmer.
+  Då BFS har komplexiteten O(b^d) där b=avg(branching factor) och d = djupet på första mål-noden (dvs endNode) kommer dock detta att ta väldigt lång tid, då b generellt sett är väldigt stor för både skådespelare och filmer.
 
 TODO:
 1. Koppla samman detta med någon typ av front-end för att visualisera sammankopplingen.
